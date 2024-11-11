@@ -43,11 +43,11 @@ header{
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    gap: 109px;
+    gap: calc(109 / 1.25);
 }
 .listAds span{
     /* display: block; */
-    font-size: 12px;
+    font-size: calc(10px);
     text-transform: uppercase;
     color: #b05d5d;
 }
@@ -57,21 +57,32 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 350px;
+    padding: 18px calc(350px / 1.25);
     margin-bottom: 0px;
 }
-.list-infor span img{
+.list-infor{
+    display: flex;
+    /* gap: 25px; */
+    justify-content: space-between;
+    align-items: center;
+}
+.list-infor span a img{
     width: 20px;
     height: 20px;
     margin-right: 10px;
     color: #000000;
 }
-.list-infor span i{
+
+.list-infor span a{
     display: inline-block;
     margin-right: 10px;
+    font-size: 12px;
+}
+.list-infor span a:last-child{
+    margin-right: 0px;
 }
 span.slogan{
-    font-size: 12px;
+    font-size: calc(12px);
     color: #000000;
     font-weight: bold;
     text-transform: uppercase;
@@ -92,21 +103,20 @@ span.slogan{
     width: 100%;
     height: 45px;
     color: #fff;
-    padding: 17px 350px ;
-    padding-right: 650px;
+    padding: 17px calc(350px / 1.25); ;
+    /* padding-right: 650px; */
     background-color: #232323;
     display: flex;
-    justify-content: space-between;
-    gap: 25px;
+    justify-content: flex-start;
+    gap: calc(25px *1.25);
     align-items: center;
 }
 .navigation li.add-tooltip{
-    /* display: inline-block; */
     position: relative;
 }
 
 .navigation li a{
-    font-size: 14px;
+    font-size: calc(14px);
     font-weight: bold;
     color: #fff;
 }
@@ -172,8 +182,8 @@ main{
     width: 100%;
     height: 720px;
     background-color: #dff1f1;
-    padding: 0px 350px;
-    padding-right: calc(350px - 18px);
+    padding: 0px calc(350px / 1.25);
+    padding-right: calc(calc(350px / 1.25) - 18px);
     display: flex;
     justify-content: space-between;
     gap: 155px;
@@ -229,7 +239,7 @@ main{
 /* ----------------- */
 .product{
     width: 100%;
-    padding: 30px 350px;
+    padding: 30px calc(350px / 1.25);
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -241,14 +251,14 @@ main{
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
-    gap: 32px;
+    gap: calc(32px / 1.25);
 }
 .item-product{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc((100% - 32px) / 3);
+    width: calc((100% - calc(32px / 1.25)) / 3);
     height: 200px ;
     cursor: pointer;
 }
@@ -310,11 +320,11 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 32px;
+    gap: calc(32px / 1.25);
     margin-bottom: 20px;
 }
 .line, .textLine{
-    width: calc((100% - 32px) / 3);
+    width: calc((100% - calc(32px / 1.25)) / 3);
 }
 .textLine{
     display: flex;
@@ -323,7 +333,6 @@ main{
     font-size: 20px;
     line-height: 20px;
     font-weight: bold;
-    /* gap: 10px; */
 }
 .line{
     height: 2px;
@@ -346,14 +355,14 @@ a.viewAll:hover{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 32px;
+    gap: calc(32px / 1.25);
 }
 .newProduct{
-    width: calc((100% - 32px) / 4);
+    width: calc((100% - calc(32px / 1.25)) / 4);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: calc(20px / 1.25);
 }
 .imgProduct{
     width: 100%;
@@ -365,7 +374,7 @@ a.viewAll:hover{
 .btnHover{
     z-index: 100;
     width: 100%;
-    height: 75px;
+    height: calc(75px / 1.25);
     position: absolute;
     bottom: 0px;
     left: 0;
@@ -380,16 +389,16 @@ a.viewAll:hover{
     width: 80%;
     outline: none;
     background-color: #fff;
-    padding: 16px 50px; 
+    padding: calc(16px / 1.25) calc(50px / 1.25); 
     border: 2px solid #000;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center; 
     height: auto;
-    font-size: 14px;
+    font-size: calc(14px / 1.25);
     font-weight: bold;
-    line-height: 14px;
+    line-height: calc(14px / 1.25);
     color: #000;
     
 }
@@ -432,8 +441,8 @@ a.viewAll:hover{
     align-items: center;
 }
 .pickColor {
-    width: 32px;
-    height: 32px;
+    width: calc(32px / 1.25);
+    height: calc(32px / 1.25);;
     border: 1px solid #e8e8e8;
     padding: 2px;
     border-radius: 50%;
@@ -450,8 +459,8 @@ a.viewAll:hover{
     background-color: #06bfe2;
 }
 .add-heart{
-    width: 40px;
-    height: 40px;
+    width: calc(40px / 1.25);
+    height: calc(40px / 1.25);;
     border-radius: 50%;
     position: absolute;
     top: 5%;
@@ -464,7 +473,7 @@ a.viewAll:hover{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
+    font-size: calc(20px / 1.25);
     color: #000;
     cursor: pointer;
 }
@@ -480,17 +489,17 @@ a.viewAll:hover{
     color: #b05d5d;
 }
 .pickSize{
-    padding-bottom: 10px;
+    padding-bottom: 6px;
     position: absolute;
     left: 0;
-    bottom: 75px;
+    bottom: calc(75px / 1.25);
     width: 100%;
-    height: 70px;
+    height: calc(70px/1.25);
     background-color: #fff;
     color: #000;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 2px;
     justify-content: space-evenly;
     align-items: center;
     display: none;
@@ -505,7 +514,7 @@ ul.listSize li{
     align-self: center;
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: calc(16px / 1.25);
     line-height: 14px;
     font-weight: bold;
     padding-bottom: 3px;
@@ -517,11 +526,11 @@ ul.listSize li:hover{
     border-bottom: 1px solid #000;
 }
 span.closePick{
-    width: 30px;
-    height: 30px;
+    width: calc(30px/1.25);
+    height: calc(30px/1.25);
     position: absolute;
     right: 0;
-    bottom: 145px;
+    bottom: calc(calc(70px/1.25) + calc(75px/1.25));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -553,7 +562,7 @@ span.closePick{
 .gallery{
     width: 100%;
     height: 525px;
-    padding: 50px 350px;
+    padding: 50px calc(350px / 1.25);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -632,7 +641,7 @@ span.closePick{
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    z-index: 1000;
+    z-index: 500;
 }
 
 .left {
@@ -665,7 +674,7 @@ footer{
     width: 100%;
     background-color: #232323;
     color: #fff;
-    padding: 38px 350px;
+    padding: 38px calc(350px / 1.25);
     padding-bottom: 58px;
     display: flex;
     flex-direction: column;
@@ -725,7 +734,7 @@ footer{
 .corporight{
     display: flex;
     justify-content: space-between;
-    gap: 435px;
+    gap: 300px;
    
 }
 
